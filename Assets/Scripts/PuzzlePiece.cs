@@ -6,7 +6,7 @@ public class PuzzlePiece : MonoBehaviour
 {
     [SerializeField] private int index = 0;
     [SerializeField] private Transform piecePos;
-    [SerializeField] bool isMoving = false;
+     internal bool isMoving = false;
 
     void Update()
     {
@@ -18,6 +18,6 @@ public class PuzzlePiece : MonoBehaviour
     }
     void MovePiece()
     {
-        transform.position = Input.mousePosition;
+        transform.position =  Input.mousePosition;
     }
 }

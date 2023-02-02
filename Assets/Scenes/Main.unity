@@ -218,6 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7219fe633bcef4cba63c0dc0e2928f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 32
 --- !u!4 &193618312
 Transform:
   m_ObjectHideFlags: 0
@@ -420,7 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038798415}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PuzzleScripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,10 +455,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394656674}
+  - component: {fileID: 1394656678}
   - component: {fileID: 1394656677}
   - component: {fileID: 1394656676}
   - component: {fileID: 1394656675}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,6 +578,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1394656678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394656673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543a5ee4a9478f47bad052c0745013c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  piecePos: {fileID: 0}
 --- !u!1 &1755155721
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +698,7 @@ GameObject:
   - component: {fileID: 1758380496}
   - component: {fileID: 1758380498}
   - component: {fileID: 1758380497}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Boarder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
