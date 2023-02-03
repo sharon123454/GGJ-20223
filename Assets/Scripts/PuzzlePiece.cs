@@ -19,19 +19,19 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     private void Start()
     {
-        var temp = rand.Next(-1, 1);
-        if (temp >= 0)
-        {
-            forceDir = new Vector2(1000, 600);
-            _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
-            print("Right");
-        }
-        else
-        {
-            forceDir = new Vector2(850, 600);
-            _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
-            print("Left");
-        }
+        //var temp = rand.Next(-1, 1);
+        //if (temp >= 0)
+        //{
+        //    forceDir = new Vector2(1000, 600);
+        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
+        //    print("Right");
+        //}
+        //else
+        //{
+        //    forceDir = new Vector2(850, 600);
+        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
+        //    print("Left");
+        //}
 
     }
 
@@ -48,6 +48,7 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        endDrag = false;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector3.zero;
     }

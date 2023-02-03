@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 261a8168e53f9594f98c7f5b85627271
+guid: b96fee1822ba985499c6a885f66566d3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Carrot_mat
-    second: {fileID: 2100000, guid: 614bfc7d8c29c6948b493ac0d8e0dc56, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
