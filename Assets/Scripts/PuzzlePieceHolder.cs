@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzlePieceHolder : MonoBehaviour
 {
-    [SerializeField] int index;
+    [SerializeField] private int index;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -13,7 +13,7 @@ public class PuzzlePieceHolder : MonoBehaviour
             PuzzlePiece puzzlePiece = collision.GetComponent<PuzzlePiece>();
 
             if (puzzlePiece.index == index)
-                puzzlePiece.TrySetPieceInPlace(transform.position);
+                puzzlePiece.TrySetPieceInPlace(transform.position, index);
         }
     }
 }
