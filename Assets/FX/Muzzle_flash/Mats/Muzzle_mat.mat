@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Muzzle_mat
+  m_Shader: {fileID: -6465566751694194690, guid: c1102e2a8e89de24fa0da994190613ef, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_efefa5d6a7e942a7948ba03821d5d514:
+        m_Texture: {fileID: 2800000, guid: 42f901e4651e13145af62317b75c6aba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_2ce2eb40d3e14d59aa0f0eaf2ba6d5f5: 1
+    - Vector1_fbcf1598ec8e4b2c9b4fdc5823c77850: 2
+    m_Colors:
+    - Color_3723f3ece3a54fbabdd5dee60a6a07ea: {r: 2.519016, g: 1.587801, b: 0.3422058, a: 0}
+    - Vector2_48fa676e5df44b6ab3ffd3dacfcac5a4: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
