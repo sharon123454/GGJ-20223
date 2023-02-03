@@ -3,32 +3,39 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine;
 
-public class PuzzlePiece : MonoBehaviour , IPointerDownHandler , IBeginDragHandler, IEndDragHandler , IDragHandler
+public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    RectTransform rTransform;
-    [SerializeField] private int index = 0;
+
+
+    [SerializeField] private int index;
     [SerializeField] private Transform piecePos;
+    [SerializeField] Rigidbody2D rigidbody2D;
     internal bool isMoving = false;
 
     private void Awake()
     {
-        rTransform = GetComponent<RectTransform>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lcorner"))
+        {
+            Debug.Log("yay");
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-       
+        rigidbody2D.isKinematic = true;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        
+        rigidbody2D.isKinematic = false;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("draging");
-    }
+
 
     public void OnDrag(PointerEventData eventData)
     {
