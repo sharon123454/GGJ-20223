@@ -45,6 +45,9 @@ public class MSPaint : MonoBehaviour
     {
         spriteRenderer.color = new Color(0.5f, 0.25f, 0);
     }
+
+   
+    
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -59,9 +62,9 @@ public class MSPaint : MonoBehaviour
                 {
                     print("3");
                     Instantiate(thing, new Vector3(
-                       hit.point.x - ASDAS,
+                       hit.point.x ,
                        hit.point.y,
-                       hit.point.z)
+                       hit.point.z + ASDAS)
                      , thing.transform.rotation);
 
                 }
