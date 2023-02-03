@@ -1,23 +1,47 @@
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine;
 
-public class PuzzlePiece : MonoBehaviour
+public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private int index = 0;
+
+
+    [SerializeField] private int index;
     [SerializeField] private Transform piecePos;
-     internal bool isMoving = false;
+    [SerializeField] Rigidbody2D rigidbody2D;
+    internal bool isMoving = false;
 
-    void Update()
+    private void Awake()
     {
-        if (isMoving)
-        {
-            MovePiece();
-        }
-
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
-    void MovePiece()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        transform.position =  Input.mousePosition;
+        if (collision.gameObject.CompareTag("Lcorner"))
+        {
+            Debug.Log("yay");
+        }
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        rigidbody2D.isKinematic = true;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        rigidbody2D.isKinematic = false;
+    }
+
+
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
     }
 }
+
+
+
