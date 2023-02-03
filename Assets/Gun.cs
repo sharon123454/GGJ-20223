@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using  UnityEngine.ParticleSystemJobs;
 
 public class Gun : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Gun : MonoBehaviour
     public float fireRate = 0.5f;
     private float nextFireTime;
     public Vector3 lockRotation;
+    public ParticleSystem particle;
 
     void LateUpdate()
     {
@@ -62,5 +64,6 @@ public class Gun : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, gunPivot.position, gunPivot.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(gunPivot.forward * shootingForce, ForceMode.Impulse);
+        particle.Play();
     }
 }
