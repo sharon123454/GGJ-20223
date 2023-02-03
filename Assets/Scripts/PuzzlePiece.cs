@@ -3,38 +3,66 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine;
 
-public class PuzzlePiece : MonoBehaviour , IPointerDownHandler , IBeginDragHandler, IEndDragHandler , IDragHandler
+public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    RectTransform rTransform;
-    [SerializeField] private int index = 0;
-    [SerializeField] private Transform piecePos;
-    internal bool isMoving = false;
+    [SerializeField] public int index;
+
+    System.Random rand = new System.Random();
+    private Rigidbody2D _rigidbody2D;
+    private bool endDrag = false;
+    private Vector2 forceDir;
 
     private void Awake()
     {
-        rTransform = GetComponent<RectTransform>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        //var temp = rand.Next(-1, 1);
+        //if (temp >= 0)
+        //{
+        //    forceDir = new Vector2(1000, 600);
+        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
+        //    print("Right");
+        //}
+        //else
+        //{
+        //    forceDir = new Vector2(850, 600);
+        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
+        //    print("Left");
+        //}
+
+    }
+
+    public void SetRigidBody(bool IsRigid) { _rigidbody2D.simulated = IsRigid; }
+
+    public void TrySetPieceInPlace(Vector3 positionToSet, int holderIndex)
+    {
+        if (endDrag && holderIndex == index)
+        {
+            SetRigidBody(false);
+            transform.position = positionToSet;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-       
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("draging");
+        endDrag = false;
+        _rigidbody2D.isKinematic = true;
+        _rigidbody2D.velocity = Vector3.zero;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
+        if (!endDrag)
+            transform.position = eventData.position;
     }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        _rigidbody2D.isKinematic = false;
+        endDrag = true;
+    }
+
 }
-
-
-
