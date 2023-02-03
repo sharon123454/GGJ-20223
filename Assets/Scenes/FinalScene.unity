@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 366897025}
-  bulletPrefab: {fileID: 2277686204042814505, guid: 8a38ba7738776c14ab5ba4324d60ab32, type: 3}
+  bulletPrefab: {fileID: 3724883038332225949, guid: 6e3ab756768f92d4bae51825c15d30c3, type: 3}
   floorMask:
     serializedVersion: 2
     m_Bits: 4294967295
