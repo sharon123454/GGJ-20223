@@ -1,23 +1,40 @@
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine;
 
-public class PuzzlePiece : MonoBehaviour
+public class PuzzlePiece : MonoBehaviour , IPointerDownHandler , IBeginDragHandler, IEndDragHandler , IDragHandler
 {
+    RectTransform rTransform;
     [SerializeField] private int index = 0;
     [SerializeField] private Transform piecePos;
-     internal bool isMoving = false;
+    internal bool isMoving = false;
 
-    void Update()
+    private void Awake()
     {
-        if (isMoving)
-        {
-            MovePiece();
-        }
-
+        rTransform = GetComponent<RectTransform>();
     }
-    void MovePiece()
+
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.position =  Input.mousePosition;
+       
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("draging");
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
     }
 }
+
+
+
