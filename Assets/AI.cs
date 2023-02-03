@@ -7,12 +7,13 @@ public class AI : MonoBehaviour
     public int _HP = 100;
 
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
 
-        if (collision.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet")
         {
-            Destroy(collision.gameObject);
+          //  Destroy(other.gameObject);
+          print("HITTTTTTTTTTTTT");
             Destroy(gameObject);
         }
     }
