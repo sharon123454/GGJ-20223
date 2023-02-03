@@ -9,6 +9,7 @@ using Color = UnityEngine.Color;
 public class SetAnimation : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
+    public GameObject fartPack;
     public int trackIndex = 1;
 
     bool enteredTop = false;
@@ -22,6 +23,8 @@ public class SetAnimation : MonoBehaviour
             {
                 enteredTop = true;
                 enteredButtom = false;
+                fartPack.transform.rotation =
+                     Quaternion.Euler(-90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
                 skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Idle Back", true);
 
             }
@@ -32,6 +35,8 @@ public class SetAnimation : MonoBehaviour
             {
                 enteredTop = false;
                 enteredButtom = true;
+                fartPack.transform.rotation =
+                    Quaternion.Euler(90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
                 skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Idle Front", true);
             }
         }
