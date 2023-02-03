@@ -1641,7 +1641,7 @@
     },
     "m_Name": "Cutoff Height",
     "m_DefaultReferenceName": "Vector1_1873d473d2b04702b3e730c113ba7e05",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Cutoff_Height",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using  UnityEngine.ParticleSystemJobs;
+using UnityEngine.ParticleSystemJobs;
 
 public class Gun : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
 
     void LateUpdate()
     {
-       // transform.localRotation = Quaternion.Euler(lockRotation);
+        // transform.localRotation = Quaternion.Euler(lockRotation);
     }
     private void Update()
     {
@@ -57,6 +57,7 @@ public class Gun : MonoBehaviour
             nextFireTime = Time.time + fireRate;
             Shoot();
         }
+
     }
 
     private void Shoot()
