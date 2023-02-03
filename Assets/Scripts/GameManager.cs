@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    PuzzlePiece heldPuzzlePiece;
 
     private void Awake()
     {
@@ -14,12 +13,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         Instance = this;
-    }
-
-    private void Update()
-    {
-        
-
     }
 
     public void StartGame(int sceneNum)

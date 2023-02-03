@@ -5,43 +5,43 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    [SerializeField] public int index;
 
-
-    [SerializeField] private int index;
-    [SerializeField] private Transform piecePos;
-    [SerializeField] Rigidbody2D rigidbody2D;
-    internal bool isMoving = false;
+    private Rigidbody2D _rigidbody2D;
+    private bool endDrag = false;
 
     private void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void SetRigidBody(bool IsRigid) { _rigidbody2D.simulated = IsRigid; }
+
+    public void TrySetPieceInPlace(Vector3 positionToSet)
     {
-        if (collision.gameObject.CompareTag("Lcorner"))
+        if (endDrag)
         {
-            Debug.Log("yay");
+            SetRigidBody(false);
+            transform.position = positionToSet;
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        rigidbody2D.isKinematic = true;
+        _rigidbody2D.isKinematic = true;
+        _rigidbody2D.velocity = Vector3.zero;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!endDrag)
+            transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        rigidbody2D.isKinematic = false;
+        _rigidbody2D.isKinematic = false;
+        endDrag = true;
     }
 
-
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        transform.position = eventData.position;
-    }
 }
-
-
-
