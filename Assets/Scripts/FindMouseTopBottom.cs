@@ -23,7 +23,7 @@ public class FindMouseTopBottom : MonoBehaviour
 
     private void Start()
     {
-        screenMiddleY = Screen.height / 2;
+        screenMiddleY = Screen.height / 1.55f;
     }
 
     private void Update()

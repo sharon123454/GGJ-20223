@@ -4412,6 +4412,7 @@ GameObject:
   - component: {fileID: 1585391439}
   - component: {fileID: 1585391444}
   - component: {fileID: 1585391445}
+  - component: {fileID: 1585391446}
   m_Layer: 0
   m_Name: Spine GameObject (Rabbit for Spine)
   m_TagString: Untagged
@@ -4473,7 +4474,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: Idle Front
   loop: 1
   timeScale: 1
 --- !u!23 &1585391441
@@ -4566,6 +4567,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1100ee8b2c6d384185e6372185b457e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1585391446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585391438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d0edf3cef04545b21a53c62621473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1585391440}
 --- !u!1 &1590014243
 GameObject:
   m_ObjectHideFlags: 0
