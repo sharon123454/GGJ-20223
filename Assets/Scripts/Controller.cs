@@ -19,6 +19,7 @@ public class Controller : MonoBehaviour
 
     private CapsuleCollider capsuleCollider;
     private Vector3 movementDirection;
+    private int clamp2;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
+        float test = transform.rotation.y;
+        transform.rotation = Quaternion.Euler(0,Mathf.Clamp(transform.rotation.y,-45,45), 0);
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
