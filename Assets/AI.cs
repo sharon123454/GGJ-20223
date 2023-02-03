@@ -10,11 +10,14 @@ public class AI : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "Bullet")
+
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
         {
-          //  Destroy(other.gameObject);
-          print("HITTTTTTTTTTTTT");
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
