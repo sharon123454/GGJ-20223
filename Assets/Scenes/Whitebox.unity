@@ -2435,6 +2435,9 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
+  isDashing: 0
+  fartPack: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!1001 &799428952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4548,6 +4551,9 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
+  isDashing: 0
+  fartPack: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!114 &1585391440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,7 +4694,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1585391440}
+  fartPack: {fileID: 0}
+  eyes: {fileID: 0}
   trackIndex: 1
+  controller: {fileID: 0}
 --- !u!1 &1590014243
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,6 +6292,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590014247}
     m_Modifications:
+    - target: {fileID: 205222196677839093, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.76332
+      objectReference: {fileID: 0}
+    - target: {fileID: 205222196677839093, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.76332
+      objectReference: {fileID: 0}
+    - target: {fileID: 205222196677839093, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76332
+      objectReference: {fileID: 0}
     - target: {fileID: 1830238485954774658, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
       propertyPath: m_RenderAlignment
       value: 2
@@ -6346,6 +6367,18 @@ PrefabInstance:
     - target: {fileID: 5295259783399760515, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
       propertyPath: m_RenderAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427145679339370708, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427145679339370708, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427145679339370708, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6427145679339370708, guid: 95b3a1cbb7f89ad4bacf266404e746af, type: 3}
       propertyPath: m_LocalRotation.w

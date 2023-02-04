@@ -87,12 +87,12 @@ public class SetAnimation : MonoBehaviour
         }
         else if (FindMouseTopBottom.Instance.isTopSide() && controller.isDashing)
         {
-            if (Input.GetKey(KeyCode.A) && !DashenteredTopRight)
+            if (Input.GetKey(KeyCode.A) && !DashenteredButtomLeft)
             {
                 DashenteredButtomRight = false;
-                DashenteredButtomLeft = false;
+                DashenteredButtomLeft = true;
 
-                DashenteredTopRight = true;
+                DashenteredTopRight = false;
                 DashenteredTopLeft = false;
 
                 enteredTopLeft = false;
