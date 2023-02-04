@@ -30,7 +30,7 @@ public class SetAnimation : MonoBehaviour
     void Start()
     {
         skeletonAnimation.AnimationState.End += AnimationState_End;
-        
+
     }
 
     private void AnimationState_End(TrackEntry trackEntry)
@@ -49,7 +49,10 @@ public class SetAnimation : MonoBehaviour
     {
         if (FindMouseTopBottom.Instance.isTopSide() && !controller.isDashing)
         {
-            eyes.gameObject.SetActive(false);
+            if (eyes != null)
+            {
+                eyes.gameObject.SetActive(false);
+            }
 
             if (Input.GetKey(KeyCode.A) && !enteredButtomLeft)
             {
