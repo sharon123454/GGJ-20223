@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Controller : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Controller : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     private Vector3 movementDirection;
     private int clamp2;
-
+    public VisualEffect fartPack;
     void Start()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
@@ -40,6 +41,8 @@ public class Controller : MonoBehaviour
         {
             dashTime = Time.time + dashDuration;
             isDashing = true;
+            fartPack.playRate = 10;
+            fartPack.gameObject.SetActive(true);
         }
 
         if (isDashing)
@@ -48,6 +51,9 @@ public class Controller : MonoBehaviour
             if (Time.time >= dashTime)
             {
                 isDashing = false;
+                fartPack.playRate = 10;
+                fartPack.gameObject.SetActive(false);
+
             }
         }
 
