@@ -36,10 +36,15 @@ public class AsyncOperationProgressExample : MonoBehaviour
         // m_Button.onClick.AddListener(LoadButton);
     }
 
+    private bool wentIn = false;
     public void LoadButton(int currentScene)
     {
+        if (!wentIn)
+        {
+            wentIn = true;
+            StartCoroutine(LoadScene(currentScene));
+        }
         //Start loading the Scene asynchronously and output the progress bar
-        StartCoroutine(LoadScene(currentScene));
     }
 
     public void StartNewGame()
@@ -58,8 +63,10 @@ public class AsyncOperationProgressExample : MonoBehaviour
         //When the load is still in progress, output the Text and progress bar
         while (!asyncOperation.isDone)
         {
-            asyncOperation.allowSceneActivation = true;
-
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                asyncOperation.allowSceneActivation = true;
+            }
 
             yield return null;
         }
