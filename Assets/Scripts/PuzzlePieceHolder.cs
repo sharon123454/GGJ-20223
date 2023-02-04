@@ -12,7 +12,7 @@ public class PuzzlePieceHolder : MonoBehaviour
         {
             PuzzlePiece puzzlePiece = collision.GetComponent<PuzzlePiece>();
 
-            if (puzzlePiece.index == index)
+            if (puzzlePiece.index == index){}
                 puzzlePiece.TrySetPieceInPlace(transform.position, index);
         }
     }

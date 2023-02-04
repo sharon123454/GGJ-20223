@@ -43,6 +43,7 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         {
             SetRigidBody(false);
             transform.position = positionToSet;
+            GameManager.Instance.RiseCount();
         }
     }
 
