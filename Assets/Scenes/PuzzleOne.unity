@@ -548,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5593430985488052066, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
       propertyPath: forceMulti
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 561113952}
   - component: {fileID: 561113951}
   m_Layer: 5
-  m_Name: CellingFloorCollider
+  m_Name: CellingCollider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1690,6 +1690,10 @@ PrefabInstance:
       propertyPath: index
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5593430985488052066, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
+      propertyPath: forceMulti
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5593430985488052067, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
       propertyPath: m_Size.x
       value: 158
@@ -1897,7 +1901,7 @@ GameObject:
   - component: {fileID: 3607509008881306163}
   - component: {fileID: 3607509008881306161}
   m_Layer: 5
-  m_Name: ColliderFloorCollider
+  m_Name: FloorCollider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,6 +2166,10 @@ PrefabInstance:
     - target: {fileID: 5593430985488052066, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
       propertyPath: index
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593430985488052066, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
+      propertyPath: forceMulti
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5593430985488052067, guid: b742bb228d5f38e42ba9479ea57551dd, type: 3}
       propertyPath: m_Size.x
