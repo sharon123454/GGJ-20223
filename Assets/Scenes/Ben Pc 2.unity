@@ -4902,7 +4902,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ChangeLevel: 4
+  ChangeLevel: 7
 --- !u!4 &2080324946
 Transform:
   m_ObjectHideFlags: 0

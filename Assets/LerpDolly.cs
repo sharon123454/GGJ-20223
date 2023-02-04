@@ -12,6 +12,8 @@ public class LerpDolly : MonoBehaviour
     public Image _image;
     private int getView = 0;
     public AnimationCurve anim;
+
+    public int ChangeLevel;
     void Start()
     {
         getView = (int)Camera.main.fieldOfView;
@@ -19,7 +21,7 @@ public class LerpDolly : MonoBehaviour
 
     public IEnumerator CameraLerEnumerator()
     {
-        AsyncOperationProgressExample.Instance.LoadButton(6);
+        AsyncOperationProgressExample.Instance.LoadButton(ChangeLevel);
         while (t < duration)
         {
             t += Time.deltaTime;

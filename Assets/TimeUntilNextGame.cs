@@ -8,6 +8,7 @@ public class TimeUntilNextGame : MonoBehaviour
     public float _time;
     public float realTime;
     public TextMeshProUGUI timeText;
+    public int ChangeScene;
     void Start()
     {
         
@@ -23,7 +24,7 @@ public class TimeUntilNextGame : MonoBehaviour
         if (_time <= realTime && !wentIn)
         {
             wentIn = true;
-            AsyncOperationProgressExample.Instance.LoadButton(5);
+            AsyncOperationProgressExample.Instance.LoadButton(ChangeScene);
             //ChangeScene
         }
     }

@@ -6071,6 +6071,7 @@ MonoBehaviour:
   _time: 5
   realTime: 0
   timeText: {fileID: 1452261692}
+  ChangeScene: 5
 --- !u!114 &2068475450
 MonoBehaviour:
   m_ObjectHideFlags: 0

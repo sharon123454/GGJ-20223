@@ -24,8 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/PuzzleTwo.unity
     guid: 56c38939d4ac2eb4d999afe63f2db464
   - enabled: 1
-    path: Assets/Scenes/Ben Pc 1.unity
-    guid: 4f961fe8b2cddc246b263de9f4e73b8f
+    path: Assets/Scenes/Ben Pc 2.unity
+    guid: 7e5d612f41b6e334199007a4df674f01
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 877429557034da44997f05b8a1f29bbe
