@@ -2409,6 +2409,7 @@ MonoBehaviour:
     m_Bits: 0
   isDashing: 0
   fartPack: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!1 &867159731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,7 +4643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e90fa5162b94894f8291a817c0d3464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
   sensitivity: 2
   dashSpeed: 80
   dashDuration: 0.3
@@ -4652,6 +4653,7 @@ MonoBehaviour:
     m_Bits: 128
   isDashing: 0
   fartPack: {fileID: 1560184967}
+  gun: {fileID: 1590014248}
 --- !u!114 &1585391440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4708,7 +4710,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: dac4771734399cf44ba99e99dd3bc4b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4926,6 +4928,7 @@ MonoBehaviour:
   fireRate: 0.1
   lockRotation: {x: 0, y: 0, z: 0}
   particle: {fileID: 247586549}
+  isShooting: 0
 --- !u!1 &1608528775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,7 +5150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4608984105873989470, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5671980756204010833, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_Name
@@ -5155,7 +5158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671980756204010833, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6178964766555191019, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_InitialEventNameOverriden

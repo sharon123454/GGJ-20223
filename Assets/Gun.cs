@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour
     private float nextFireTime;
     public Vector3 lockRotation;
     public ParticleSystem particle;
+    public bool isShooting = false;
 
     void LateUpdate()
     {
@@ -57,11 +58,12 @@ public class Gun : MonoBehaviour
             nextFireTime = Time.time + fireRate;
             Shoot();
         }
-
     }
 
     private void Shoot()
     {
+
+        
         GameObject bullet = Instantiate(bulletPrefab, gunPivot.position, gunPivot.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(gunPivot.forward * shootingForce, ForceMode.Impulse);
