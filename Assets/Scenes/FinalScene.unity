@@ -6227,9 +6227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf4b4f3d6868324ba8382b409053dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 5
+  _time: 20
   realTime: 0
   timeText: {fileID: 1452261692}
+  ChangeScene: 0
 --- !u!1 &2077553653
 GameObject:
   m_ObjectHideFlags: 0
