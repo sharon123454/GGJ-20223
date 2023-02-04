@@ -4736,6 +4736,7 @@ GameObject:
   - component: {fileID: 1585391444}
   - component: {fileID: 1585391445}
   - component: {fileID: 1585391446}
+  - component: {fileID: 1585391447}
   m_Layer: 0
   m_Name: Spine GameObject (Rabbit for Spine)
   m_TagString: Untagged
@@ -4755,7 +4756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e90fa5162b94894f8291a817c0d3464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
   sensitivity: 2
   dashSpeed: 80
   dashDuration: 0.3
@@ -4909,8 +4910,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1585391440}
   fartPack: {fileID: 1560184965}
+<<<<<<< HEAD
   trackIndex: 1
   controller: {fileID: 1585391439}
+=======
+  trackIndex: 5
+  controller: {fileID: 1585391439}
+--- !u!320 &1585391447
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585391438}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e6aaa967c2f3b0140aacc542d8eae3a8, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2084847961867211469, guid: e6aaa967c2f3b0140aacc542d8eae3a8, type: 2}
+    value: {fileID: 1585391440}
+  m_ExposedReferences:
+    m_References: []
+>>>>>>> 983e8d1e9d53733a15166fe6fdec0139fbaf14aa
 --- !u!1 &1590014243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,6 +5047,7 @@ MonoBehaviour:
   fireRate: 0.1
   lockRotation: {x: 0, y: 0, z: 0}
   particle: {fileID: 247586549}
+  isShooting: 0
 --- !u!1 &1608528775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,7 +5273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4608984105873989470, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5671980756204010833, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_Name
@@ -5255,7 +5281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671980756204010833, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6178964766555191019, guid: 0f02b1a7218cba643b4a770b1deab0d5, type: 3}
       propertyPath: m_InitialEventNameOverriden

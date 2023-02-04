@@ -48,7 +48,11 @@ public class SetAnimation : MonoBehaviour
         if (FindMouseTopBottom.Instance.isTopSide() && !controller.isDashing)
         {
 
+<<<<<<< HEAD
 
+=======
+           
+>>>>>>> 983e8d1e9d53733a15166fe6fdec0139fbaf14aa
             if (Input.GetKey(KeyCode.A) && !enteredButtomLeft)
             {
                 enteredButtomLeft = true;
@@ -222,6 +226,7 @@ public class SetAnimation : MonoBehaviour
                     skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Right Dash", false);
                     print("FRONT RIGHT DASH");
                 }
+<<<<<<< HEAD
                 if (Input.GetKey(KeyCode.S) && !DashenteredTopRight)
                 {
                     fartPack.transform.rotation =
@@ -240,6 +245,8 @@ public class SetAnimation : MonoBehaviour
                     skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Right Dash", false);
                     print("FRONT RIGHT DASH");
                 }
+=======
+>>>>>>> 983e8d1e9d53733a15166fe6fdec0139fbaf14aa
                 //if (Input.GetKey(KeyCode.S) && !DashenteredTopRight)
                 //{
                 //    DashenteredButtomLeft = false;
