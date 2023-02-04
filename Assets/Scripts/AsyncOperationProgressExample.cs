@@ -33,25 +33,25 @@ public class AsyncOperationProgressExample : MonoBehaviour
     void Start()
     {
         //Call the LoadButton() function when the user clicks this Button
-        m_Button.onClick.AddListener(LoadButton);
+       // m_Button.onClick.AddListener(LoadButton);
     }
 
-    public void LoadButton()
+    public void LoadButton(int currentScene)
     {
         //Start loading the Scene asynchronously and output the progress bar
-        StartCoroutine(LoadScene());
+        StartCoroutine(LoadScene(currentScene));
     }
 
     public void StartNewGame()
     {
         asyncOperation.allowSceneActivation = true;
     }
-    IEnumerator LoadScene()
+    IEnumerator LoadScene(int currentScene)
     {
         yield return null;
 
         //Begin to load the Scene you specify
-        asyncOperation = SceneManager.LoadSceneAsync(1);
+        asyncOperation = SceneManager.LoadSceneAsync(currentScene);
         //Don't let the Scene activate until you allow it to
         asyncOperation.allowSceneActivation = false;
         Debug.Log("Pro :" + asyncOperation.progress);

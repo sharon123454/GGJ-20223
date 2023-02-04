@@ -19,7 +19,7 @@ public class LerpDolly : MonoBehaviour
 
     public IEnumerator CameraLerEnumerator()
     {
-        AsyncOperationProgressExample.Instance.LoadButton();
+        AsyncOperationProgressExample.Instance.LoadButton(2);
         while (t < duration)
         {
             t += Time.deltaTime;
