@@ -11,7 +11,7 @@ public class TimeUntilNextGame : MonoBehaviour
     public int ChangeScene;
     void Start()
     {
-        
+        AsyncOperationProgressExample.Instance.LoadButton(ChangeScene);
     }
 
     private bool wentIn = false;
@@ -24,8 +24,9 @@ public class TimeUntilNextGame : MonoBehaviour
         if (_time <= realTime && !wentIn)
         {
             wentIn = true;
-            AsyncOperationProgressExample.Instance.LoadButton(ChangeScene);
-            //ChangeScene
+            
+             AsyncOperationProgressExample.Instance.StartNewGame();
         }
+
     }
 }
