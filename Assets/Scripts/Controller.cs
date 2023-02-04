@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour
     private float verticalInput;
     private Vector3 mousePosition;
     private float dashTime;
-    private bool isDashing;
+    public bool isDashing;
 
     private CapsuleCollider capsuleCollider;
     private Vector3 movementDirection;
@@ -37,7 +37,7 @@ public class Controller : MonoBehaviour
         movementDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
         movementDirection *= speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
             dashTime = Time.time + dashDuration;
             isDashing = true;

@@ -2407,6 +2407,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
+  isDashing: 0
   fartPack: {fileID: 0}
 --- !u!1 &867159731
 GameObject:
@@ -4621,6 +4622,7 @@ GameObject:
   - component: {fileID: 1585391444}
   - component: {fileID: 1585391445}
   - component: {fileID: 1585391446}
+  - component: {fileID: 1585391447}
   m_Layer: 0
   m_Name: Spine GameObject (Rabbit for Spine)
   m_TagString: Untagged
@@ -4648,6 +4650,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
+  isDashing: 0
   fartPack: {fileID: 1560184967}
 --- !u!114 &1585391440
 MonoBehaviour:
@@ -4705,7 +4708,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: faf69eb89c0b1c944bc7b7b64d3fb0a0, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4791,7 +4794,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1585391440}
   fartPack: {fileID: 1560184965}
-  trackIndex: 1
+  trackIndex: 5
+  controller: {fileID: 1585391439}
+--- !u!320 &1585391447
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585391438}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e6aaa967c2f3b0140aacc542d8eae3a8, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2084847961867211469, guid: e6aaa967c2f3b0140aacc542d8eae3a8, type: 2}
+    value: {fileID: 1585391440}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1590014243
 GameObject:
   m_ObjectHideFlags: 0
