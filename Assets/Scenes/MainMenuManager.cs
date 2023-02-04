@@ -33,7 +33,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void LoadScene()
     {
-        //play the specific scene we need.
+        GameManager.Instance.StartGame(1);
     }
 
     public void LoadOptions()
