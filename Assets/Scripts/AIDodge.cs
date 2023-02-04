@@ -6,7 +6,7 @@ using UnityEngine;
 public class AIDodge : MonoBehaviour
 {
     [SerializeField] private GameObject _playerRef;
-    [SerializeField] private float attackRange = 1;
+    [SerializeField] private float attackRange = 5;
     [SerializeField] private int _HP = 100;
 
     private NavMeshAgent _agent;
@@ -23,7 +23,6 @@ public class AIDodge : MonoBehaviour
     {
         _playerRef = GameObject.Find("Spine GameObject (Rabbit for Spine)");
     }
-
 
     private void Update()
     {
