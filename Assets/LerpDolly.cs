@@ -30,7 +30,7 @@ public class LerpDolly : MonoBehaviour
             yield return null;
         }
         AsyncOperationProgressExample.Instance.StartNewGame();
-    }
+    }   
 
     public void LerpCamera()
     {
