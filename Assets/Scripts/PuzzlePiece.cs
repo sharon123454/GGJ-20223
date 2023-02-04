@@ -11,6 +11,7 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     private Rigidbody2D _rigidbody2D;
     private bool endDrag, fin;
     private Vector2 forceDir;
+    [SerializeField] float forceMulti;
 
     private void Awake()
     {
@@ -19,20 +20,22 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     private void Start()
     {
-        //var temp = rand.Next(-1, 1);
-        //if (temp >= 0)
-        //{
-        //    forceDir = new Vector2(1000, 600);
-        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
-        //    print("Right");
-        //}
-        //else
-        //{
-        //    forceDir = new Vector2(850, 600);
-        //    _rigidbody2D.AddForce(forceDir.normalized * 10, ForceMode2D.Impulse);
-        //    print("Left");
-        //}
+        AddForceOnStart();
 
+    }
+    public void AddForceOnStart()
+    {
+        var randomDirection = rand.Next(0, 2);
+        if (randomDirection == 0)
+        {
+            _rigidbody2D.AddForce(Vector2.right * forceMulti * this.transform.position, ForceMode2D.Impulse);
+
+        }
+        else
+        {
+            _rigidbody2D.AddForce(Vector2.left * forceMulti * this.transform.position, ForceMode2D.Impulse);
+
+        }
     }
 
     public void SetRigidBody(bool IsRigid) { _rigidbody2D.simulated = IsRigid; }
