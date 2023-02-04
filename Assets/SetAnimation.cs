@@ -11,6 +11,7 @@ public class SetAnimation : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
     public GameObject fartPack;
+    public GameObject eyes;
     public int trackIndex = 1;
 
     bool enteredTopLeft = false;
@@ -25,10 +26,11 @@ public class SetAnimation : MonoBehaviour
     bool DashenteredButtomLeft = false;
     bool DashenteredButtomRight = false;
     public Controller controller;
-
+    private SpriteRenderer test;
     void Start()
     {
         skeletonAnimation.AnimationState.End += AnimationState_End;
+        
     }
 
     private void AnimationState_End(TrackEntry trackEntry)
@@ -47,7 +49,7 @@ public class SetAnimation : MonoBehaviour
     {
         if (FindMouseTopBottom.Instance.isTopSide() && !controller.isDashing)
         {
-
+            eyes.gameObject.SetActive(false);
 
             if (Input.GetKey(KeyCode.A) && !enteredButtomLeft)
             {
@@ -144,6 +146,7 @@ public class SetAnimation : MonoBehaviour
         }
         else
         {
+            eyes.gameObject.SetActive(true);
 
             if (!controller.isDashing)
             {
