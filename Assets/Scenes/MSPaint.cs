@@ -5,6 +5,7 @@ public class MSPaint : MonoBehaviour
 {
     [SerializeField] GameObject thing;
     [SerializeField] float ASDAS = 1;
+    [SerializeField] Camera cam;
     LayerMask wall;
     float num =0;
     SpriteRenderer spriteRenderer;
@@ -72,15 +73,16 @@ public class MSPaint : MonoBehaviour
             if (Physics.Raycast(ray, out hit,10000))
             {
                 print("2");
-                if (hit.collider.gameObject.name == "RawImage" || hit.collider.gameObject.name == "TestDontTouch")
+                if (hit.collider.gameObject.name == "RawImage" || hit.collider.gameObject.name == "TestDontTouch(Clone)")
                 {
                     print("3");
-                    Instantiate(thing, new Vector3(
+                   var x = Instantiate(thing, new Vector3(
                        hit.point.x ,
                        hit.point.y,
-                       hit.point.z + (ASDAS+num))
+                       0.1791199f + (ASDAS+num))
                      , thing.transform.rotation);
-                    num -= 0.0001f;
+                    num -= 0.00002f;
+                    x.transform.LookAt(cam.transform);
                 }
                 
                

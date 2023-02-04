@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Bullet
   - Ben
+  - Button
   layers:
   - Default
   - TransparentFX
