@@ -8,6 +8,8 @@ TagManager:
   - Lcorner
   - Enemy
   - Bullet
+  - Ben
+  - Button
   layers:
   - Default
   - TransparentFX
