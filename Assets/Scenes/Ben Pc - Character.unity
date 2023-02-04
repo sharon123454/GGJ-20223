@@ -5290,7 +5290,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Oh this might need further tweaking
 
-    im going to keep working on it...               '
+    i''m going to keep working on
+    it...               '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a513df3a2a88834b8e48b1463e04fda, type: 2}
   m_sharedMaterial: {fileID: -8778250762886408731, guid: 9a513df3a2a88834b8e48b1463e04fda, type: 2}

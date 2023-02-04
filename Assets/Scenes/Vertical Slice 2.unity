@@ -5069,7 +5069,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: faf69eb89c0b1c944bc7b7b64d3fb0a0, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6469,7 +6469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf4b4f3d6868324ba8382b409053dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _time: 15
+=======
+  _time: 60
+>>>>>>> 4e4c4e623d48182288fa5d0bd9c5cbe79c65cd38
   realTime: 0
   timeText: {fileID: 1452261692}
   ChangeScene: 5
