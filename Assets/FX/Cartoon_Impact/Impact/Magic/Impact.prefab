@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198238417718666772}
   - component: {fileID: 199200354154142474}
   m_Layer: 0
-  m_Name: ' Stars Inner'
+  m_Name: Particles Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4549,7 +4549,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b22999712355474795091cef25021b4, type: 2}
+  - {fileID: 2100000, guid: 776677ab3818fb249adaca05f4e04545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4607,7 +4607,7 @@ GameObject:
   - component: {fileID: 198352115723562896}
   - component: {fileID: 199760871414760328}
   m_Layer: 0
-  m_Name: ' Stars'
+  m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9144,7 +9144,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b22999712355474795091cef25021b4, type: 2}
+  - {fileID: 2100000, guid: 776677ab3818fb249adaca05f4e04545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

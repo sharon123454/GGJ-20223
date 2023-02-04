@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.AI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AI : MonoBehaviour
 {
@@ -47,6 +48,11 @@ public class AI : MonoBehaviour
                 anim.Attack();
                 isAttacking = true;
                 print("attacking now");
+                if (SceneManager.GetActiveScene().buildIndex > 6)
+                {
+                    AudioManager.Instance.PlayVFX(AudioManager.Instance.hitPlayer);
+
+                }
             }
         }
     }
@@ -55,6 +61,11 @@ public class AI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            if (SceneManager.GetActiveScene().buildIndex > 6)
+            {
+            AudioManager.Instance.PlayVFX(AudioManager.Instance.hitEnemy);
+            }
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

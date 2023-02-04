@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ParticleSystemJobs;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Gun : MonoBehaviour
@@ -49,6 +50,11 @@ public class Gun : MonoBehaviour
 
         if (Input.GetMouseButton(0) && Time.time > nextFireTime)
         {
+            if (SceneManager.GetActiveScene().buildIndex > 6)
+            {
+                AudioManager.Instance.Play(AudioManager.Instance._shoot);
+            }
+
             nextFireTime = Time.time + fireRate;
             Shoot();
         }

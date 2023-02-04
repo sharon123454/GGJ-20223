@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
 public class Controller : MonoBehaviour
@@ -54,6 +55,11 @@ public class Controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
+            if (SceneManager.GetActiveScene().buildIndex > 6)
+            {
+                AudioManager.Instance.PlayVFX(AudioManager.Instance._Dash);
+            }
+
             dashTime = Time.time + dashDuration;
             isDashing = true;
             fartPack.playRate = 10;
