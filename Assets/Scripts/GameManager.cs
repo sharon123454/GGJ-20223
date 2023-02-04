@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private bool wentIn = false;
