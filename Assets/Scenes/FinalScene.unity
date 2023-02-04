@@ -503,6 +503,27 @@ Transform:
   m_Father: {fileID: 1356623024}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!1 &108189248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3160625317585160831, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
+  m_PrefabInstance: {fileID: 3160625318813809500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &108189251
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108189248}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 48
+  m_CollisionDetection: 0
 --- !u!1 &115506349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,12 +6243,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068475446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf4b4f3d6868324ba8382b409053dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 20
+  _time: 200
   realTime: 0
   timeText: {fileID: 1452261692}
   ChangeScene: 0
@@ -6635,6 +6656,22 @@ PrefabInstance:
     - target: {fileID: 3160625317580610578, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
       propertyPath: m_Name
       value: Spine GameObject (Rabbit for Spine)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160625317585160820, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
+      propertyPath: maxAngle
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160625317585160820, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
+      propertyPath: minAngle
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160625317585160820, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
+      propertyPath: sensitivity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160625317585160820, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}
+      propertyPath: lockRotation.y
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9d8de04c5ed1324d8784cb8c4fd1845, type: 3}

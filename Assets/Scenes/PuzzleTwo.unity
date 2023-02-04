@@ -1257,6 +1257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Distortiion
       objectReference: {fileID: 0}
+    - target: {fileID: 1210975808227014221, guid: 5488cb9bc65431546846547dfbb7b698, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1983150332926373111, guid: 5488cb9bc65431546846547dfbb7b698, type: 3}
       propertyPath: m_RootOrder
       value: 9

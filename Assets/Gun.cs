@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
     private void Update()
     {
 
-        transform.LookAt(gunPivot);
+      //  transform.LookAt(gunPivot);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = transform.position.z - Camera.main.transform.position.z;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -41,10 +41,7 @@ public class Gun : MonoBehaviour
         Vector3 lookDirection = mousePos - transform.position;
         lookDirection.y = 0;
         Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
-        if (lookRotation.y >= 45)
-        {
-            return;
-        }
+
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * sensitivity);
 
         float pivotAngle = gunPivot.localEulerAngles.z;
