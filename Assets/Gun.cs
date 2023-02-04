@@ -21,8 +21,7 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-
-      //  transform.LookAt(gunPivot);
+        //  transform.LookAt(gunPivot);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = transform.position.z - Camera.main.transform.position.z;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -46,7 +45,7 @@ public class Gun : MonoBehaviour
 
         float pivotAngle = gunPivot.localEulerAngles.z;
         pivotAngle = Mathf.Clamp(pivotAngle, minAngle, maxAngle);
-        gunPivot.localEulerAngles = new Vector3(0, 0, pivotAngle);
+        gunPivot.localEulerAngles = new Vector3(0, 0, -pivotAngle);
 
         if (Input.GetMouseButton(0) && Time.time > nextFireTime)
         {

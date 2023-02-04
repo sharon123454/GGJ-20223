@@ -1,0 +1,20 @@
+
+Caterhino.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Charge Face
+  rotate: false
+  xy: 501, 98
+  size: 231, 242
+  orig: 231, 242
+  offset: 0, 0
+  index: -1
+Front Body
+  rotate: false
+  xy: 2, 2
+  size: 497, 338
+  orig: 497, 338
+  offset: 0, 0
+  index: -1

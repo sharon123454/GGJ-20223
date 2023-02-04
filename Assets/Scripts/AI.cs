@@ -8,7 +8,7 @@ public class AI : MonoBehaviour
     [SerializeField] private GameObject _playerRef;
     [SerializeField] private float attackRange = 1;
     [SerializeField] private int _HP = 100;
-
+    public AiSpineAnim anim;
     private NavMeshAgent _agent;
     private Vector3 _destination;
     private bool isAttacking;
@@ -44,6 +44,7 @@ public class AI : MonoBehaviour
         {
             if (_destination != transform.position)
             {
+                anim.Attack();
                 isAttacking = true;
                 print("attacking now");
             }
