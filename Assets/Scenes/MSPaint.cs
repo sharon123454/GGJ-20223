@@ -6,6 +6,7 @@ public class MSPaint : MonoBehaviour
     [SerializeField] GameObject thing;
     [SerializeField] float ASDAS = 1;
     LayerMask wall;
+    float num =0;
     SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -46,8 +47,21 @@ public class MSPaint : MonoBehaviour
         spriteRenderer.color = new Color(0.5f, 0.25f, 0);
     }
 
-   
-    
+    public void Size1() 
+    {
+        thing.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+    }
+    public void Size2()
+    { 
+        thing.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+
+    }
+    public void Size3()
+    { 
+        thing.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -58,16 +72,18 @@ public class MSPaint : MonoBehaviour
             if (Physics.Raycast(ray, out hit,10000))
             {
                 print("2");
-                if (hit.collider.gameObject.name == "RawImage")
+                if (hit.collider.gameObject.name == "RawImage" || hit.collider.gameObject.name == "TestDontTouch")
                 {
                     print("3");
                     Instantiate(thing, new Vector3(
                        hit.point.x ,
                        hit.point.y,
-                       hit.point.z + ASDAS)
+                       hit.point.z + (ASDAS+num))
                      , thing.transform.rotation);
-
+                    num -= 0.0001f;
                 }
+                
+               
 
 
             }
