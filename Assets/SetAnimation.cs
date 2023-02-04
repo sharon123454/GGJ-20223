@@ -222,6 +222,24 @@ public class SetAnimation : MonoBehaviour
                     skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Right Dash", false);
                     print("FRONT RIGHT DASH");
                 }
+                if (Input.GetKey(KeyCode.S) && !DashenteredTopRight)
+                {
+                    fartPack.transform.rotation =
+                        Quaternion.Euler(90, fartPack.transform.rotation.y, 0);
+                    DashenteredTopRight = false;
+                    DashenteredTopLeft = false;
+
+                    DashenteredButtomLeft = false;
+                    DashenteredButtomRight = false;
+
+                    enteredTopLeft = false;
+                    enteredTopRight = false;
+                    enteredButtomLeft = false;
+                    enteredButtomRight = false;
+
+                    skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Right Dash", false);
+                    print("FRONT RIGHT DASH");
+                }
                 //if (Input.GetKey(KeyCode.S) && !DashenteredTopRight)
                 //{
                 //    DashenteredButtomLeft = false;

@@ -22,22 +22,37 @@ public class Controller : MonoBehaviour
     private Vector3 movementDirection;
     private int clamp2;
     public VisualEffect fartPack;
+
+    public Gun gun;
+
+    private float cachedSpeed;
     void Start()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
+        cachedSpeed = speed;
     }
 
     void Update()
     {
+        if (Input.GetMouseButton(0))
+        {
+            speed = cachedSpeed / 2;
+
+        }
+        else
+        {
+            speed = cachedSpeed;
+        }
+
         float test = transform.rotation.y;
-        transform.rotation = Quaternion.Euler(0,Mathf.Clamp(transform.rotation.y,-45,45), 0);
+        transform.rotation = Quaternion.Euler(0, Mathf.Clamp(transform.rotation.y, -45, 45), 0);
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         movementDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
         movementDirection *= speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
             dashTime = Time.time + dashDuration;
             isDashing = true;
