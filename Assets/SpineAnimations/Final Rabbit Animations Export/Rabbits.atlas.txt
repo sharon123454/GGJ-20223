@@ -1,0 +1,76 @@
+
+Rabbits.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back Blaster
+  rotate: false
+  xy: 724, 285
+  size: 105, 135
+  orig: 105, 135
+  offset: 0, 0
+  index: -1
+Back Body
+  rotate: true
+  xy: 2, 162
+  size: 258, 359
+  orig: 258, 359
+  offset: 0, 0
+  index: -1
+Back Hand
+  rotate: false
+  xy: 935, 354
+  size: 50, 66
+  orig: 50, 66
+  offset: 0, 0
+  index: -1
+Front Hand
+  rotate: false
+  xy: 935, 354
+  size: 50, 66
+  orig: 50, 66
+  offset: 0, 0
+  index: -1
+Back Left Ear
+  rotate: false
+  xy: 831, 106
+  size: 102, 314
+  orig: 102, 314
+  offset: 0, 0
+  index: -1
+Back Right Ear
+  rotate: true
+  xy: 2, 58
+  size: 102, 314
+  orig: 102, 314
+  offset: 0, 0
+  index: -1
+Front Blaster
+  rotate: false
+  xy: 724, 148
+  size: 105, 135
+  orig: 105, 135
+  offset: 0, 0
+  index: -1
+Front Body
+  rotate: true
+  xy: 363, 162
+  size: 258, 359
+  orig: 258, 359
+  offset: 0, 0
+  index: -1
+Front Left Ear
+  rotate: true
+  xy: 318, 58
+  size: 102, 314
+  orig: 102, 314
+  offset: 0, 0
+  index: -1
+Front Right Ear
+  rotate: true
+  xy: 634, 2
+  size: 102, 314
+  orig: 102, 314
+  offset: 0, 0
+  index: -1

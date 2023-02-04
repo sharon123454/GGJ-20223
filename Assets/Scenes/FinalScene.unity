@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f5e20d78f04ee4a4585c7d72b8fa7d86, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4661,7 +4661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 04bd10ca5aa922f44a52dd4fb0bc35be, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: c219e85008d4cb24aa8888770ac17929, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0

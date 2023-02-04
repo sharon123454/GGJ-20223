@@ -25,7 +25,7 @@ public class SetAnimation : MonoBehaviour
                 enteredButtom = false;
                 fartPack.transform.rotation =
                      Quaternion.Euler(-90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
-                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Idle Back", true);
+                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Back Idle", true);
 
             }
         }
@@ -37,7 +37,7 @@ public class SetAnimation : MonoBehaviour
                 enteredButtom = true;
                 fartPack.transform.rotation =
                     Quaternion.Euler(90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
-                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Idle Front", true);
+                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Idle", true);
             }
         }
     }
