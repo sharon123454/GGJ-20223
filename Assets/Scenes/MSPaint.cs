@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -81,6 +82,13 @@ public class MSPaint : MonoBehaviour
 
     public void SetDrawTrue() 
     {
+
+        StartCoroutine(SetDrawTrueIe());
+    }
+
+    public IEnumerator SetDrawTrueIe()
+    {
+        yield return new WaitForSeconds(0.2f);
         draw = true;
     }
     public void ActiveScreen2()
