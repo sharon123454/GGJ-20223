@@ -9,7 +9,7 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     System.Random rand = new System.Random();
     private Rigidbody2D _rigidbody2D;
-    private bool endDrag = false;
+    private bool endDrag, fin;
     private Vector2 forceDir;
 
     private void Awake()
@@ -44,14 +44,18 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
             SetRigidBody(false);
             transform.position = positionToSet;
             GameManager.Instance.RiseCount();
+            fin = true;
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        endDrag = false;
-        _rigidbody2D.isKinematic = true;
-        _rigidbody2D.velocity = Vector3.zero;
+        if (!fin)
+        {
+            endDrag = false;
+            _rigidbody2D.isKinematic = true;
+            _rigidbody2D.velocity = Vector3.zero;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
