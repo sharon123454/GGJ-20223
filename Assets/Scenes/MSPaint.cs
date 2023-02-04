@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MSPaint : MonoBehaviour
 {
+    [SerializeField] bool draw;
     [SerializeField] GameObject thing;
     [SerializeField] float ASDAS = 1;
     [SerializeField] Camera cam;
@@ -78,7 +79,10 @@ public class MSPaint : MonoBehaviour
 
     }
 
-
+    public void SetDrawTrue() 
+    {
+        draw = true;
+    }
     public void ActiveScreen2()
     {
 
@@ -126,6 +130,10 @@ public class MSPaint : MonoBehaviour
     }
     private void Update()
     {
+        if (!draw)
+        {
+            return;
+        }
         Undo();
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
