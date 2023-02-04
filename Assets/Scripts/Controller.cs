@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour
     private float verticalInput;
     private Vector3 mousePosition;
     private float dashTime;
-    private bool isDashing;
+    public bool isDashing;
 
     private CapsuleCollider capsuleCollider;
     private Vector3 movementDirection;

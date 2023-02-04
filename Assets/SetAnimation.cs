@@ -1,3 +1,4 @@
+using System;
 using Spine;
 using Spine.Unity;
 using System.Collections;
@@ -12,34 +13,97 @@ public class SetAnimation : MonoBehaviour
     public GameObject fartPack;
     public int trackIndex = 1;
 
-    bool enteredTop = false;
-    bool enteredButtom = false;
+    bool enteredTopLeft = false;
+    bool enteredTopRight = false;
+
+    bool enteredButtomLeft = false;
+    bool enteredButtomRight = false;
+
+    bool DashenteredTopLeft = false;
+    bool DashenteredTopRight = false;
+
+    bool DashenteredButtomLeft = false;
+    bool DashenteredButtomRight = false;
+    public Controller controller;
+
+    void Start()
+    {
+        skeletonAnimation.AnimationState.End += AnimationState_End;
+    }
+
+    private void AnimationState_End(TrackEntry trackEntry)
+    {
+        if (!trackEntry.Loop)
+        {
+            DashenteredTopLeft = false;
+            DashenteredTopRight = false;
+            DashenteredButtomLeft = false;
+            DashenteredButtomRight = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (FindMouseTopBottom.Instance.isTopSide())
+        if (FindMouseTopBottom.Instance.isTopSide() && !controller.isDashing)
         {
-            if (!enteredTop)
+
+
+            if (Input.GetKey(KeyCode.A) && !enteredButtomLeft)
             {
-                enteredTop = true;
-                enteredButtom = false;
-                fartPack.transform.rotation =
-                     Quaternion.Euler(-90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
-                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Back Idle", true);
+                enteredButtomLeft = true;
+                enteredButtomRight = false;
+
+                enteredTopLeft = false;
+                enteredTopRight = false;
+
+                DashenteredButtomLeft = false;
+                DashenteredButtomRight = false;
+                DashenteredTopLeft = false;
+                DashenteredTopRight = false;
+                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Back Walk Left", true);
+                print("BACK LEFT");
 
             }
-<<<<<<< HEAD
-        }
-        else
-        {
-            if (!enteredButtom)
+
+            if (Input.GetKey(KeyCode.D) && !enteredButtomRight)
             {
-                enteredTop = false;
-                enteredButtom = true;
+                enteredButtomLeft = false;
+                enteredButtomRight = true;
+
+                enteredTopLeft = false;
+                enteredTopRight = false;
+
+                DashenteredButtomLeft = false;
+                DashenteredButtomRight = false;
+                DashenteredTopLeft = false;
+                DashenteredTopRight = false;
+                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Back Walk Right", true);
+                print("BACK RIGHT");
+            }
+
+        }
+        else if (FindMouseTopBottom.Instance.isTopSide() && controller.isDashing)
+        {
+            if (Input.GetKey(KeyCode.A) && !DashenteredTopRight)
+            {
+                DashenteredButtomRight = false;
+                DashenteredButtomLeft = false;
+
+                DashenteredTopRight = true;
+                DashenteredTopLeft = false;
+
+                enteredTopLeft = false;
+                enteredTopRight = false;
+                enteredButtomLeft = false;
+                enteredButtomRight = false;
+
                 fartPack.transform.rotation =
-                    Quaternion.Euler(90, fartPack.transform.rotation.y, fartPack.transform.rotation.z);
-                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Idle", true);
-=======
+                    Quaternion.Euler(-90, fartPack.transform.rotation.y, -45);
+                skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Back Left Dash", false);
+                print("BACK LEFT DASH");
+
+            }
 
             if (Input.GetKey(KeyCode.D) && !DashenteredButtomRight)
             {
@@ -176,7 +240,6 @@ public class SetAnimation : MonoBehaviour
                 //    skeletonAnimation.AnimationState.SetAnimation(trackIndex, "Front Right Dash", false);
                 //    print("BACK RIGHT DASH AAAAAAAAA");
                 //}
->>>>>>> 983e8d1 (no message)
             }
         }
     }

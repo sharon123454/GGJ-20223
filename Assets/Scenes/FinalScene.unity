@@ -2415,6 +2415,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
+  isDashing: 0
   fartPack: {fileID: 0}
 --- !u!1 &867159731
 GameObject:
@@ -2639,6 +2640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf8e089179291c469f8fae56828c00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerRef: {fileID: 0}
+  attackRange: 1
   _HP: 100
 --- !u!135 &936068243
 SphereCollider:
@@ -4664,6 +4667,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
+  isDashing: 0
   fartPack: {fileID: 1560184967}
 --- !u!114 &1585391440
 MonoBehaviour:
@@ -4721,7 +4725,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: faf69eb89c0b1c944bc7b7b64d3fb0a0, type: 2}
+  - {fileID: 2100000, guid: dac4771734399cf44ba99e99dd3bc4b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4808,6 +4812,7 @@ MonoBehaviour:
   skeletonAnimation: {fileID: 1585391440}
   fartPack: {fileID: 1560184965}
   trackIndex: 1
+  controller: {fileID: 1585391439}
 --- !u!1 &1590014243
 GameObject:
   m_ObjectHideFlags: 0
