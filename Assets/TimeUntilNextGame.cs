@@ -19,7 +19,7 @@ public class TimeUntilNextGame : MonoBehaviour
     void Update()
     {
         realTime += Time.deltaTime;
-        timeText.text = $"You Survived {realTime} Seconds Out of {_time}";
+        timeText.text = $"{realTime.ToString("0")}/ {_time.ToString("0")}";
 
         if (_time <= realTime && !wentIn)
         {
