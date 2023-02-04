@@ -13,6 +13,7 @@ public class FadeInFadeOut : MonoBehaviour
     public AnimationCurve anim;
     public GameObject FirstClicked;
     public GameObject SecondClicked;
+    public GameObject UglyDrawing;
     public IEnumerator CameraLerEnumerator()
     {
         while (t < duration)
@@ -23,6 +24,7 @@ public class FadeInFadeOut : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
+        UglyDrawing.SetActive(false);
         SecondClicked.SetActive(true);
         while (_t < _duration)
         {
