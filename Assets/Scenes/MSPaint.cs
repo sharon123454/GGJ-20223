@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,13 @@ public class MSPaint : MonoBehaviour
     [SerializeField] GameObject thing;
     [SerializeField] float ASDAS = 1;
     [SerializeField] Camera cam;
+    [SerializeField] GameObject secondScreen;
+    [SerializeField] GameObject firstScreen;
+    [SerializeField] GameObject WhiteCanvas2;
+    [SerializeField] GameObject WhiteCanvas1;
+    List<GameObject> things = new List<GameObject>();
+
+
     LayerMask wall;
     float num =0;
     SpriteRenderer spriteRenderer;
@@ -63,6 +71,21 @@ public class MSPaint : MonoBehaviour
 
     }
 
+
+    public void ActiveScreen2()
+    {
+        
+        secondScreen.SetActive(true);
+        firstScreen.SetActive(false);
+        WhiteCanvas2.SetActive(true);
+        WhiteCanvas1.SetActive(false);
+
+        foreach (var item in things)
+        {
+            item.SetActive(false);
+        }
+
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -83,6 +106,7 @@ public class MSPaint : MonoBehaviour
                      , thing.transform.rotation);
                     num -= 0.00002f;
                     x.transform.LookAt(cam.transform);
+                    things.Add(x);
                 }
                 
                
