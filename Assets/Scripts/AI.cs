@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class AI : MonoBehaviour
 {
-    [SerializeField] private GameObject playerRef;
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private GameObject _playerRef;
+    [SerializeField] private float attackRange = 1;
+    [SerializeField] private int _HP = 100;
 
-    public int _HP = 100;
     private NavMeshAgent _agent;
     private Vector3 _destination;
+    private bool isAttacking;
 
     private void Awake()
     {
@@ -24,14 +25,25 @@ public class AI : MonoBehaviour
 
     private void Update()
     {
-        if (playerRef)
-            SetEnemyDestination(playerRef.transform.position);
+        if (_playerRef)
+            SetEnemyDestination(_playerRef.transform.position);
+
+        if (isAttacking)
+            SetEnemyDestination(transform.position);
 
         var currDes = new Vector3(_destination.x, transform.position.y, _destination.z);
-        if ((currDes - transform.position).magnitude > 1)
+        if ((currDes - transform.position).magnitude > attackRange)
         {
             transform.LookAt(currDes);
-            _agent.destination = currDes * speed;
+            _agent.destination = currDes;
+        }
+        else
+        {
+            if (_destination != transform.position)
+            {
+                isAttacking = true;
+                print("attacking now");
+            }
         }
     }
 
@@ -39,11 +51,16 @@ public class AI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 
     public void SetEnemyDestination(Vector3 newDestination) { /*if (player exists)*/_destination = newDestination; /*else { _destination = transform.position;}*/ }
+
+    public void FinishAttackAnimationEvent()
+    {
+        isAttacking = false;
+    }
 
 }

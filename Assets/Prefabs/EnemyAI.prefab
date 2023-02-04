@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf8e089179291c469f8fae56828c00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRef: {fileID: 0}
+  _playerRef: {fileID: 0}
+  attackRange: 1
   _HP: 100
 --- !u!195 &2665715766347003805
 NavMeshAgent:
