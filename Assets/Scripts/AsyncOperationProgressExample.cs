@@ -12,27 +12,46 @@ using UnityEngine.UI;
 
 public class AsyncOperationProgressExample : MonoBehaviour
 {
+    public static AsyncOperationProgressExample Instance { get; private set; }
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     public Text m_Text;
     public Button m_Button;
 
+    private AsyncOperation asyncOperation;
     void Start()
     {
         //Call the LoadButton() function when the user clicks this Button
         m_Button.onClick.AddListener(LoadButton);
     }
 
-    void LoadButton()
+    public void LoadButton()
     {
         //Start loading the Scene asynchronously and output the progress bar
         StartCoroutine(LoadScene());
     }
 
+    public void StartNewGame()
+    {
+        asyncOperation.allowSceneActivation = true;
+    }
     IEnumerator LoadScene()
     {
         yield return null;
 
         //Begin to load the Scene you specify
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Scene3");
+        asyncOperation = SceneManager.LoadSceneAsync(1);
         //Don't let the Scene activate until you allow it to
         asyncOperation.allowSceneActivation = false;
         Debug.Log("Pro :" + asyncOperation.progress);
