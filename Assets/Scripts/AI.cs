@@ -20,11 +20,14 @@ public class AI : MonoBehaviour
 
     private void Start()
     {
-        SetEnemyDestination(transform.position);
+        _playerRef = GameObject.Find("Spine GameObject (Rabbit for Spine)");
     }
+
 
     private void Update()
     {
+        //_agent.destination = _playerRef.transform.position;
+
         if (_playerRef)
             SetEnemyDestination(_playerRef.transform.position);
 
