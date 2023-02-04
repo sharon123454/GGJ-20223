@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ParticleSystemJobs;
+using UnityEngine.UIElements;
 
 public class Gun : MonoBehaviour
 {
@@ -18,12 +19,9 @@ public class Gun : MonoBehaviour
     public Vector3 lockRotation;
     public ParticleSystem particle;
 
-    void LateUpdate()
-    {
-        // transform.localRotation = Quaternion.Euler(lockRotation);
-    }
     private void Update()
     {
+
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = transform.position.z - Camera.main.transform.position.z;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
