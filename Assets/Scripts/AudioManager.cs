@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
     public AudioSource _MusicSource;
+    public AudioSource __MusicSource;
 
     [Header("New VFX")]
     public AudioClip _shoot;
@@ -122,6 +123,11 @@ public class AudioManager : MonoBehaviour
     {
         _MusicSource.clip = clip;
         _MusicSource.Play();
+    }
+    public void __PlayMusic(AudioClip clip)
+    {
+        __MusicSource.clip = clip;
+        __MusicSource.Play();
     }
     // Play a random clip from an array, and randomize the pitch slightly.
     public void RandomSoundEffect(params AudioClip[] clips)

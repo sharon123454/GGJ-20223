@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 877429557034da44997f05b8a1f29bbe
+  - enabled: 1
+    path: Assets/Scenes/MainMenuGreenScreen.unity
+    guid: dafb2aa620e537a4baa40ca6f4b99bde
   m_configObjects: {}

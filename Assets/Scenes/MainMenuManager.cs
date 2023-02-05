@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -28,9 +29,18 @@ public class MainMenuManager : MonoBehaviour
             Destroy(gameObject);
 
         Instance = this;
+
+        
     }
 
-
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex > 6)
+        {
+            ActivateCredits();
+            AudioManager.Instance.PlayVFX(AudioManager.Instance._Dash);
+        }
+    }
     public void LoadScene()
     {
         GameManager.Instance.StartGame(1);
