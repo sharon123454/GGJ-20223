@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -67,10 +68,12 @@ public class AudioManager : MonoBehaviour
     // Singleton Instance.
     #region Singelton
     public static AudioManager Instance { get; private set; }
+
+  
     private void Awake()
     {
         // If there is an Instance, and it's not me, delete myself.
-
+        
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -82,6 +85,8 @@ public class AudioManager : MonoBehaviour
     }
     #endregion
     // Initialize the singleton Instance.
+
+    
     private void Start()
     {
         //PlayerPrefs.GetInt("MusicVolume", 0);
@@ -121,11 +126,14 @@ public class AudioManager : MonoBehaviour
     }
     public void _PlayMusic(AudioClip clip)
     {
+        _MusicSource.volume = 0.5f;
+
         _MusicSource.clip = clip;
         _MusicSource.Play();
     }
     public void __PlayMusic(AudioClip clip)
     {
+        _MusicSource.volume = 0.5f;
         __MusicSource.clip = clip;
         __MusicSource.Play();
     }
