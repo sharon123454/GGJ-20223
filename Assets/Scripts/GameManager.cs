@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     private bool wentIn = false;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
         if (count3Events == 3 && !wentIn)
         {
             wentIn = true;
@@ -34,5 +38,7 @@ public class GameManager : MonoBehaviour
     {
         count3Events++;
     }
+
+    
 
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 331872161002685948}
   - component: {fileID: -7279476008374476075}
   - component: {fileID: -6823216250873860966}
-  - component: {fileID: 4420078270019895966}
   m_Layer: 0
   m_Name: CARROT
   m_TagString: Bullet
@@ -114,16 +113,3 @@ CapsuleCollider:
   m_Height: 0.4421358
   m_Direction: 1
   m_Center: {x: 0, y: 0.0034416243, z: 0.07617381}
---- !u!114 &4420078270019895966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277686204042814505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1679a5695c2b41049afcbdfb272e778d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myValue: 1
