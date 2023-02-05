@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asset01
       objectReference: {fileID: 0}
+    - target: {fileID: 4353735808172857139, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4353735808172857148, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -20,16 +24,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.4
+      value: -7.32
       objectReference: {fileID: 0}
     - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.6
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 4353735808172857149, guid: 034177c6eceec2b4099b506e16abcddb, type: 3}
       propertyPath: m_LocalRotation.w
